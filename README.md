@@ -1,12 +1,12 @@
 
-#1 Our EBCPA protocol
+# 1 Our EBCPA protocol
 
 Source codes of solidity-based smart contract, NS, VanetMobiSim in our proposed BCPPA
 
 
-#1. Solidity-based Smart Contract
+## 1. Solidity-based Smart Contract
 
-###1 Environment
+### 1 Environment
 Remix:
 http://remix.ethereum.org
 
@@ -31,8 +31,10 @@ Featured Plugins:
 
 Gas limit
 3000000 
+
 ===================================================================================================================
-###2. Steps
+
+### 2. Steps
 
 1) Open: http://remix.ethereum.org
 2) File explorer: APKList.sol
@@ -43,7 +45,7 @@ Gas limit
 
 
 ===================================================================================================================
-###3. Related Test data and results
+### 3. Related Test data and results
 
 Address
 manager: 0xca35b7d915458ef540ade6068dfe2f44e8fa733c  (balance: 100 ether)
@@ -60,7 +62,7 @@ Contract address:
 
 
 ===================================================================================================================
-###4. On basis of the above testing data, we run the algorithms of Submit, Check and Revoke in sequence. The running results are showed as follows.
+### 4. On basis of the above testing data, we run the algorithms of Submit, Check and Revoke in sequence. The running results are showed as follows.
 
 Deploy
 transaction cost: 707821 gas
@@ -80,15 +82,15 @@ transaction cost: 27130 gas
 execution cost: 24348 gas
 
 
-##2. NS + VanetMobiSim
-###1. VanetMobiSim Related File
+## 2. NS + VanetMobiSim
+### 1. VanetMobiSim Related File
 These files include some map source data of format .RT (the used map in our simulation is TGR11001.RT1), the setting of vehicles's speed and scenario generation test file.
 
-###2. NS Related File
+### 2. NS Related File
 The test files are <awk_average_delay_RSU.awk> and <awk_Packet_Loss_RSU.awk> for testing average delay and packet loss, respectively.
 
-###3. How to use these files
-####1. Dependency:
+### 3. How to use these files
+#### 1. Dependency:
 1) ns 2.35, avaiable at: http://nchc.dl.sourceforge.net/project/nsnam/allinone/ns-allinone-2.35/ns-allinone-2.35.tar.gz
 
 2) JDK, avaiable at: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
@@ -97,7 +99,7 @@ The test files are <awk_average_delay_RSU.awk> and <awk_Packet_Loss_RSU.awk> for
 
 4) VanetMobiSim, avaiable at:http://vanet.eurecom.fr/
 
-####2. Setps
+#### 2. Setps
 1) Use vms_get_scen.xml to generate the simualtion scenario file:
 order: java -jar VanetMobiSim.jar vms_get_scen.xml
 
