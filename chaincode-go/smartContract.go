@@ -8,16 +8,16 @@ import (
 	"log"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
-	abac "github.com/hyperledger/fabric-samples/asset-transfer-abac/chaincode-go/smart-contract"
+	apklist "github.com/colyn91/EBCPA/tree/main/chaincode-go/smart-contract"
 )
 
 func main() {
-	abacSmartContract, err := contractapi.NewChaincode(&abac.SmartContract{})
+	apklistSmartContract, err := contractapi.NewChaincode(&apklist.SmartContract{})
 	if err != nil {
-		log.Panicf("Error creating abac chaincode: %v", err)
+		log.Panicf("Error creating apklist chaincode: %v", err)
 	}
 
-	if err := abacSmartContract.Start(); err != nil {
-		log.Panicf("Error starting abac chaincode: %v", err)
+	if err := apklistSmartContract.Start(); err != nil {
+		log.Panicf("Error starting apklist chaincode: %v", err)
 	}
 }
