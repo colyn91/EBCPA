@@ -1,4 +1,4 @@
-module github.com/hyperledger/fabric-samples/asset-transfer-abac/chaincode-go
+module github.com/colyn91/EBCPA/tree/main/chaincode-go
 
 go 1.15
 
