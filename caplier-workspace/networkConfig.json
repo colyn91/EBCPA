@@ -1,0 +1,80 @@
+{
+    "version" : "1.0",
+    "name": "Caliper test",
+    "caliper" : {
+   
+        "blockchain": "fabric"
+    },
+    "clients": {
+     
+        "Admin@org1.example.com": {
+       
+            "client": {
+       
+                "credentialStore": {
+       
+                    "path": "/tmp/org1",
+                    "cryptoStore": {
+       
+                        "path": "/tmp/org1"
+                    }
+                },
+                "organization": "Org1",
+                "clientPrivateKey": {
+       
+                    "path": "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/36c7d41a8193ac68b2118d197c2f8196aa62da80859047f4c33e01978d3e7af9_sk"
+                },
+                "clientSignedCert": {
+       
+                    "path": "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem"
+                },
+                "connection": {
+       
+                    "timeout": {
+       
+                        "peer": {
+       
+                            "endorser": "300"
+                        }
+                    }
+                }
+
+            }
+        }
+    },
+    "channels": {
+       
+        "mychannel": {
+       
+            "created" : true,
+            "contracts": [
+                {
+       
+                    "id":"apklist",
+                    "version":"v1"
+                }
+            ]
+        }
+    },
+    "organizations": {
+        "Org1": {
+            "mspid": "Org1MSP",
+            "peers": [
+                "peer0.org1.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.org1.example.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICJjCCAc2gAwIBAgIUObQ4ynruXBLSrhIHLGiBjq9P3zUwCgYIKoZIzj0EAwIw\ncDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH\nEwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh\nLm9yZzEuZXhhbXBsZS5jb20wHhcNMjExMTA0MTE0ODAwWhcNMzYxMDMxMTE0ODAw\nWjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV\nBAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT\nY2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABEYj\n2ffI2CeAK45a++Mcq0wxFEOYvIj1ASSq0qPT28wbJPg9aEKiJLeUGgTtCnW8w5/7\nXlZQmjgmo1P0GFBjAcOjRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG\nAQH/AgEBMB0GA1UdDgQWBBQYAfSajhjPyuXgyyQjYz/lWx25ejAKBggqhkjOPQQD\nAgNHADBEAiAIKWy9cVbn+rQkmhoy2FGK2er5j4JpOqElfJXdvKCBRAIgIH/2YhoZ\nk5gOo+t+T4hxVTmfw8c1RVXgTriFO4jLv5s=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.org1.example.com",
+                "hostnameOverride": "peer0.org1.example.com"
+            }
+        }
+    }
+
+}
