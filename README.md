@@ -81,16 +81,40 @@ Revoke
 transaction cost: 27130 gas
 execution cost: 24348 gas
 
+## 2. Go-based Chaincode
 
-## 2. NS + VanetMobiSim
-### 2.1 VanetMobiSim Related File
+### 2.1 Environment
+Ubuntu: v19.04
+
+Fabric: v2.1
+
+Caliper: v0.4.0
+
+Dependencies:
+1) docker: v19.03.6
+2) docker-compose: v2.0.1
+3) go: v1.17
+4) Node.js: v10.22.1
+5) npm: v6.14.6
+6) npx: v10.2.2
+
+### 2.2 Steps
+1) Chaincode design, details are shown in folder: chaincode-go
+2) Deploy the chaincode in the test-network, details of builiding test-network could be referred to https://github.com/hyperledger/fabric-samples
+3) Prepare the benchmark materias, details are shown in folder: caliper-workspace
+4) Use npx caliper to execute the benchmark and obtain the final report.html
+
+===================================================================================================================
+
+## 3. NS + VanetMobiSim
+### 3.1 VanetMobiSim Related File
 These files include some map source data of format .RT (the used map in our simulation is TGR11001.RT1), the setting of vehicles's speed and scenario generation test file.
 
-### 2.2 NS Related File
+### 3.2 NS Related File
 The test files are <awk_average_delay_RSU.awk> and <awk_Packet_Loss_RSU.awk> for testing average delay and packet loss, respectively.
 
-### 2.3 How to use these files
-#### 2.3.1 Dependency:
+### 3.3 How to use these files
+#### 3.3.1 Dependency:
 1) ns 2.35, avaiable at: http://nchc.dl.sourceforge.net/project/nsnam/allinone/ns-allinone-2.35/ns-allinone-2.35.tar.gz
 
 2) JDK, avaiable at: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
@@ -99,7 +123,7 @@ The test files are <awk_average_delay_RSU.awk> and <awk_Packet_Loss_RSU.awk> for
 
 4) VanetMobiSim, avaiable at:http://vanet.eurecom.fr/
 
-#### 2.3.2 Setps
+#### 3.3.2 Setps
 1) Use vms_get_scen.xml to generate the simualtion scenario file:
 order: java -jar VanetMobiSim.jar vms_get_scen.xml
 
