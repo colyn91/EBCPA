@@ -99,10 +99,10 @@ Dependencies:
 6) npx: v10.2.2
 
 ### 2.2 Steps
-1) Chaincode design, details are shown in folder: chaincode-go
+1) Chaincode design, details are shown in the folder of chaincode-go <https://github.com/colyn91/EBCPA/tree/main/chaincode-go>
 2) Deploy the chaincode in the test-network, details of builiding test-network could be referred to https://github.com/hyperledger/fabric-samples
-3) Prepare the benchmark materias, details are shown in folder: caliper-workspace
-4) Use npx caliper to execute the benchmark and obtain the final report.html
+3) Prepare the benchmark materias, details are shown in the folder of caliper-workspace <https://github.com/colyn91/EBCPA/tree/main/caliper-workspace>. The use of caliper could be referred to https://github.com/hyperledger/caliper
+4) Use npx caliper to execute the benchmark and obtain the final report.html <https://github.com/colyn91/EBCPA/blob/main/caliper-workspace/report.html>
 
 ===================================================================================================================
 
