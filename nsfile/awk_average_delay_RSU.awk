@@ -13,8 +13,8 @@ BEGIN {
 	sum=0.0;
 	delay=0.0
 	i=0;
-	sign_time = 0.0266584;
-	verify_time = 0.0268801;
+	sign_time = 0.031850;
+	verify_time = 0.02430;
 	recvd_num_rsu = 0;
 	#run_time = 100;
 	#verify_num = run_time / verify_time;
