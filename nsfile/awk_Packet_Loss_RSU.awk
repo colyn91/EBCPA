@@ -9,7 +9,7 @@ BEGIN {#模拟前，数据初始化
 	ratio_verify = 0;#总比率和
 	pkt_Loss_ratio = 0;#丢包率
 	
-	verify_time = 0.0268801;#单次验证时间
+	verify_time = 0.02430;#单次验证时间
 	run_time = 100;#总运行时间
 	
 	n_verify = run_time/verify_time;
